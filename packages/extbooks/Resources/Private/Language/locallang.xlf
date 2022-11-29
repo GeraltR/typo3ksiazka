@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:extbooks/Resources/Private/Language/locallang.xlf" date="2022-11-29T20:29:03Z" product-name="extbooks">
+		<header/>
+		<body>
+			<trans-unit id="tx_extbooks_domain_model_autor" resname="tx_extbooks_domain_model_autor">
+				<source>Autor</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_autor.imie" resname="tx_extbooks_domain_model_autor.imie">
+				<source>Imie</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_autor.nazwisko" resname="tx_extbooks_domain_model_autor.nazwisko">
+				<source>Nazwisko</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_autor.zdjecie" resname="tx_extbooks_domain_model_autor.zdjecie">
+				<source>Zdjecie</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_ksiazka" resname="tx_extbooks_domain_model_ksiazka">
+				<source>Ksiazka</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_ksiazka.tytul" resname="tx_extbooks_domain_model_ksiazka.tytul">
+				<source>Tytul</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_ksiazka.opis" resname="tx_extbooks_domain_model_ksiazka.opis">
+				<source>Opis</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_ksiazka.okladka" resname="tx_extbooks_domain_model_ksiazka.okladka">
+				<source>Okladka</source>
+			</trans-unit>
+			<trans-unit id="tx_extbooks_domain_model_ksiazka.autor" resname="tx_extbooks_domain_model_ksiazka.autor">
+				<source>Autor</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

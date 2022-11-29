@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:extbooks/Resources/Private/Language/locallang_csh_tx_extbooks_domain_model_ksiazka.xlf" date="2022-11-29T20:29:03Z" product-name="extbooks">
+		<header/>
+		<body>
+			<trans-unit id="tytul.description" resname="tytul.description">
+				<source>tytul</source>
+			</trans-unit>
+			<trans-unit id="opis.description" resname="opis.description">
+				<source>opis</source>
+			</trans-unit>
+			<trans-unit id="okladka.description" resname="okladka.description">
+				<source>okladka</source>
+			</trans-unit>
+			<trans-unit id="autor.description" resname="autor.description">
+				<source>autor</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

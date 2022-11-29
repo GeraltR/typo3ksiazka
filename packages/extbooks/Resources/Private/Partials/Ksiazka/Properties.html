@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-extbooks">
+	<tr>
+		<td><f:translate key="tx_extbooks_domain_model_ksiazka.tytul" /></td>
+		<td>{ksiazka.tytul}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_extbooks_domain_model_ksiazka.opis" /></td>
+		<td>{ksiazka.opis}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_extbooks_domain_model_ksiazka.okladka" /></td>
+		<td>
+				<f:image src="{ksiazka.okladka.originalResource.publicUrl}" width="200"/>
+            </td>
+	</tr>
+</table>
+</html>

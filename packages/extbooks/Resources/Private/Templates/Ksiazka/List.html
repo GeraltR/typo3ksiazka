@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Ksiazka:
+          List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <h1>Lista Książek</h1>
+
+    <f:flashMessages />
+
+    <f:link.action action="new">Nowa książka</f:link.action>
+    <table class="tx_extbooks">
+        <tr>
+            <th><f:translate key="tx_extbooks_domain_model_ksiazka.autor.imie" /></th>
+            <th><f:translate key="tx_extbooks_domain_model_ksiazka.autor.nazwisko" /></th>
+            <th><f:translate key="tx_extbooks_domain_model_ksiazka.autor.zdjecie" /></th>
+            <th><f:translate key="tx_extbooks_domain_model_ksiazka.tytul" /></th>
+            <th><f:translate key="tx_extbooks_domain_model_ksiazka.opis" /></th>
+            <th><f:translate key="tx_extbooks_domain_model_ksiazka.okladka" /></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <f:for each="{ksiazkas}" as="ksiazka">
+            <tr>
+                <td><f:link.action action="show" arguments="{ksiazka : ksiazka}">{ksiazka.autor.imie}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{ksiazka : ksiazka}">{ksiazka.autor.nazwisko}</f:link.action></td>
+                <td>
+                  <!-- <f:link.action action="show" arguments="{ksiazka : ksiazka}">{ksiazka.autor.zdjecie} -->
+                    <f:if condition="{ksiazka.autor.zdjecie.originalResource.publicUrl}!=''">
+                      <f:image src="{ksiazka.autor.zdjecie.originalResource.publicUrl}" alt="{ksiazka.autor.zdjecie.originalResource.alternative}" title="{ksiazka.autor.zdjecie.originalResource.title}" height="100px"  ></f:image>
+                    </f:if>
+                </f:link.action></td>
+                <td><f:link.action action="show" arguments="{ksiazka : ksiazka}">{ksiazka.tytul}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{ksiazka : ksiazka}">{ksiazka.opis}</f:link.action></td>
+                <!-- <td><f:link.action action="show" arguments="{ksiazka : ksiazka}">{ksiazka.okladka.originalResource.name}</f:link.action></td> -->
+                <td><f:link.action action="show" arguments="{ksiazka : ksiazka}">
+                <f:if condition="{ksiazka.okladka.originalResource.publicUrl}!=''">
+                  <f:image src="{ksiazka.okladka.originalResource.publicUrl}" alt="{ksiazka.okladka.originalResource.alternative}" title="{ksiazka.okladka.originalResource.title}" height="100px" ></f:image>
+                </f:if>
+                </f:link.action></td>
+                <td><f:link.action action="edit" arguments="{ksiazka : ksiazka}">Edit</f:link.action></td>
+                <td><f:link.action action="delete" arguments="{ksiazka : ksiazka}">Delete</f:link.action></td>
+            </tr>
+        </f:for>
+    </table>
+
+</f:section>
+
+</html>
